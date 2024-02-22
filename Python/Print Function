@@ -1,0 +1,8 @@
+#!/bin/python3
+#import sys
+if __name__ == '__main__':
+    n = int(input())
+    print(''.join(str(x+1) for x in range(n)))
+
+    #for i in range(n):
+    #sys.stdout.write(str(i+1))
