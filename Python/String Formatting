@@ -1,0 +1,13 @@
+#!/bin/python3
+def print_formatted(number):
+    # your code goes here
+
+    blank = len(bin(number)[2:])
+    for d in range(1, number + 1):
+        print(str(d).rjust(blank, ' '), str(oct(d)[2:]).rjust(blank, ' '), str(hex(d)[2:]).upper().rjust(blank, ' '),
+              str(bin(d)[2:]).rjust(blank, ' '))
+
+
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
