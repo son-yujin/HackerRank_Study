@@ -1,0 +1,20 @@
+#!/bin/python3
+if __name__ == '__main__':
+    N = int(input())
+    w=[]
+    for x in range(N):
+        c = input().split()
+        if c[0] == 'insert':
+            w.insert(int(c[1]),int(c[2]))
+        elif c[0] == 'print':
+            print(w)
+        elif c[0] == 'remove':
+            w.remove(int(c[1]))
+        elif c[0] == 'append':
+            w.append(int(c[1]))
+        elif c[0] == 'sort':
+            w.sort()
+        elif c[0] == 'pop':
+            w.pop()
+        elif c[0] == 'reverse':
+            w.reverse()
