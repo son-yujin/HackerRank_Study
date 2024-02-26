@@ -1,0 +1,18 @@
+#!/bin/python3
+if __name__ == '__main__':
+    nested_list = []
+    scores=[]
+    sec_score=[]
+    sec_names=[]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        nested_list.append([name, score])
+        scores.append(score)
+    sec_score = sorted(set(scores))[1]
+    for i in range(len(nested_list)):
+        if nested_list[i][1] == sec_score:
+            sec_names.append(nested_list[i][0])
+    sec_names.sort()
+    for i in range(len(sec_names)):
+        print(sec_names[i])
