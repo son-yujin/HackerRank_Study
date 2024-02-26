@@ -16,3 +16,4 @@ if __name__ == '__main__':
     sec_names.sort()
     for i in range(len(sec_names)):
         print(sec_names[i])
+## 더 좋은 방법 강구하기
