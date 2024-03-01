@@ -1,0 +1,14 @@
+#!/bin/python3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+if __name__ == '__main__':
+    a = int(input())
+    M = set(map(int, input().split()))
+    b = int(input())
+    N = set(map(int, input().split()))
+
+    diff=(M.difference(N))
+    diff.update(N.difference(M))
+    diff_list=sorted(list(diff))
+
+    for i in range(len(diff_list)):
+        print(diff_list[i])
