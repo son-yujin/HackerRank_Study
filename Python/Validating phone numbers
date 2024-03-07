@@ -1,0 +1,21 @@
+#!/bin/python3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def phone_num(number):
+    if len(number) == 10:
+        if number.isnumeric() == True:
+            if (number[0] == '7') or (number[0] == '8') or (number[0] == '9'):
+                return 'YES'
+            else:
+                return 'NO'
+        else:
+            return 'NO'
+    else:
+        return 'NO'
+
+
+if __name__ == '__main__':
+    n = int(input())
+    for i in range(n):
+        numbers = input()
+        result = phone_num(numbers)
+        print(result)
