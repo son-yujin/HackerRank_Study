@@ -1,0 +1,13 @@
+#!/bin/python3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import calendar
+
+def week_of_day(date):
+    month, day, year = map(str, date.split(' '))
+    dow=calendar.weekday(int(year),int(month),int(day))
+    return calendar.day_name[dow].upper()
+
+if __name__ == '__main__':
+    date = input()
+    result = week_of_day(date)
+    print(result)
