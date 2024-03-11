@@ -1,0 +1,12 @@
+#!/bin/python3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+def set_element(element):
+    s = set()
+    for i in range(len(element)):
+        s.add(element[i])
+    return len(s)
+
+if __name__ == '__main__':
+    elements = [input() for i in range(int(input()))]
+    print(set_element(elements))
