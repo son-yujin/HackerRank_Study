@@ -1,0 +1,13 @@
+#!/bin/python3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+def union_count(one,two):
+    unioned = set(one)|set(two)
+    return len(unioned)
+
+if __name__ == '__main__':
+    a_times = int(input())
+    a = list(map(int, input().split()))
+    b_times = int(input())
+    b = list(map(int, input().split()))
+    print(union_count(a,b))
