@@ -1,0 +1,8 @@
+#!/bin/python3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import numpy
+N,M=input().split()
+numpy.set_printoptions(legacy='1.13')
+setNM=numpy.eye(int(N), int(M), k = 0)
+print(setNM)
