@@ -1,0 +1,14 @@
+#!/bin/python3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy
+
+my_array = numpy.array([])
+a=[]
+N,M=input().split()
+for i in range(int(N)):
+    a.append(list(map(int, input().split())))
+my_array=numpy.array(a)
+
+my_min_axis_1= numpy.min(my_array, axis = 1)
+my_max_array_0 = numpy.max(my_min_axis_1, axis=0)
+print(my_max_array_0)
