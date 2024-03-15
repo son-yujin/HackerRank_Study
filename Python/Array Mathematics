@@ -1,0 +1,21 @@
+#!/bin/python3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy
+
+my_array = numpy.array([])
+a=[]
+b=[]
+N,M=input().split()
+for i in range(int(N)):
+    a.append(list(map(int, input().split())))
+my_array1=numpy.array(a)
+for i in range(int(N)):
+    b.append(list(map(int, input().split())))
+my_array2=numpy.array(b)
+
+print(numpy.add(my_array1 , my_array2))
+print(numpy.subtract(my_array1 , my_array2))
+print(numpy.multiply(my_array1 , my_array2))
+print(numpy.floor_divide(my_array1 , my_array2))#print(my_array1 // my_array2)
+print(numpy.mod(my_array1 , my_array2))
+print(numpy.power(my_array1 , my_array2))
