@@ -1,0 +1,17 @@
+#!/bin/python3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy
+
+N=int(input())
+a=[]
+b=[]
+for i in range(N):
+    a.append(list(map(int, input().split())))
+my_array1=numpy.array(a).reshape(N,N)
+
+for i in range(N):
+    b.append(list(map(int, input().split())))
+my_array2=numpy.array(b).reshape(N,N)
+
+print(numpy.matmul(my_array1, my_array2))
+
