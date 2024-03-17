@@ -1,0 +1,51 @@
+#!/bin/python3
+import re
+
+def fun(s):
+    # return True if s is a valid email, else return False
+    delimiters = ["@", "."]
+    string = s
+    for delimiter in delimiters:
+        string = " ".join(string.split(delimiter))
+    l = string.split(" ")
+    pattern0 = re.compile("^[A-Za-z0-9_-]+$")
+    pattern1 = re.compile("^[A-Za-z0-9]+$")
+    pattern2 = re.compile("^[A-Za-z]+$")
+#    print(l)
+    if ((len(l) == 3) and  # all have username/websitename/extension
+            (pattern0.match(str(l[0]))) and  # username pattern check
+            (pattern1.match(str(l[1]))) and  # websitename patten check
+            (len(l[2]) < 4) and  # extension length check
+            (pattern2.match(str(l[2])))):  # extension pattern check
+        result = True
+    else:
+        result = False
+    return result
+
+#    if len(l) == 3:
+#        if pattern0.match(str(l[0])):
+#            if pattern1.match(str(l[1])):
+#                if (len(l[2]) < 4) and (pattern2.match(str(l[2]))):
+#                    result = True
+#                else:
+#                    result = False
+#            else:
+#                result = False
+#        else:
+#            result = False
+#    else:
+#        result = False
+#    return result
+
+def filter_mail(emails):
+    return list(filter(fun, emails))
+
+if __name__ == '__main__':
+    n = int(input())
+    emails = []
+    for _ in range(n):
+        emails.append(input())
+
+filtered_emails = filter_mail(emails)
+filtered_emails.sort()
+print(filtered_emails)
